@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    height: 400px;
+    background-color: #0f1419;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #1a1f2e;
+    padding: 15px;
+    border-bottom: 1px solid #2d3748;
+    position: relative;
+}
+
+.menu-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.menu-icon span,
+.menu-icon::before,
+.menu-icon::after {
+    background-color: #4c6ef5;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: 0;
+}
+
+.menu-icon span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-icon::after {
+    bottom: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.search-input {
+    background-color: #4c6ef5;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 480px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.main-content {
+    display: flex;
+    height: calc(100% - 80px);
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #0f1419;
+    padding: 10px 0;
+    border-right: 1px solid #2d3748;
+    overflow-y: auto;
+}
+
+.sidebar-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #1a1f2e;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-item:hover {
+    background-color: #1a1f2e;
+}
+
+.sidebar-item.active {
+    background-color: #2d3748;
+    border-left: 3px solid #4c6ef5;
+}
+
+.sidebar-item .service {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+.sidebar-item .email {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.detail-panel {
+    flex: 1;
+    background-color: #1a1f2e;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.detail-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail-header h1 {
+    color: #e2e8f0;
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.detail-field {
+    background-color: #2d3748;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 18px;
+    border: 1px solid #4a5568;
+}
+
+.detail-field label {
+    color: #a0aec0;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.detail-field .value {
+    color: #e2e8f0;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+}
+
+.detail-field.password .value {
+    letter-spacing: 2px;
+}
+
+.detail-field.totp .value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4c6ef5;
+}
+
+.detail-footer {
+    margin-top: 30px;
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+.detail-footer .footer-item {
+    margin-bottom: 8px;
+}
+
+.sidebar::-webkit-scrollbar,
+.detail-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.detail-panel::-webkit-scrollbar-track {
+    background-color: #1a1f2e;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.detail-panel::-webkit-scrollbar-thumb {
+    background-color: #4a5568;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+.detail-panel::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 50px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #e2e8f0;
+    background-color: #2d3748;
+    border: none;
+    border-radius: 8px;
+    height: 36px;
+    width: 100%;
+    outline: none;
+    padding-left: 12px;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    color: #a0aec0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: color 0.2s ease;
+}
+
+.toggle-eye:hover {
+    color: #e2e8f0;
+}
+
+.toggle-eye svg {
+    width: 20px;
+    height: 20px;
+}
