@@ -17,15 +17,15 @@
     <div class="main-content">
         <div class="sidebar" id="sidebar">
             <div class="sidebar-item" data-account="google1">
-                <div class="service">pornhub.com</div>
+                <div class="service">Alibaba</div>
                 <div class="email">John.Doe@gmail.com</div>
             </div>
             <div class="sidebar-item active" data-account="google2">
-                <div class="service">onlyfans.com</div>
+                <div class="service">AliExpress</div>
                 <div class="email">John.Doe@gmail.com</div>
             </div>
             <div class="sidebar-item" data-account="google3">
-                <div class="service">feetfinder.com</div>
+                <div class="service">Temu</div>
                 <div class="email">John.Doe@gmail.com</div>
             </div>
             <div class="sidebar-item" data-account="amazon1">
@@ -70,10 +70,17 @@
             </div>
             
             <div class="detail-field totp">
-                <label>TOTP:</label>
-                <div class="value" id="totpValue">461938</div>
+                <label>2FA Code (TOTP):</label>
+                <div class="totp-layout">
+                    <div class="totp-code" id="totpValue">------</div>
+                    <svg class="totp-circle" width="40" height="40">
+                        <circle cx="20" cy="20" r="18" stroke="#333" stroke-width="4" fill="none"/>
+                        <circle id="totpProgress" cx="20" cy="20" r="18" stroke="#00c853" stroke-width="4" fill="none"
+                                stroke-dasharray="113.1" stroke-dashoffset="0" stroke-linecap="round"/>
+                    </svg>
+                </div>
             </div>
-            
+
             <div class="detail-footer">
                 <div class="footer-item" id="lastUsed">Last used: 17:54 on the 5 of December 2024</div>
                 <div class="footer-item" id="created">Created: 7 of July 2024</div>
@@ -83,4 +90,5 @@
     
     <script src="popup.js"></script>
 </body>
+</html>
 </html>
